@@ -8,10 +8,10 @@ const ButtonContainer = styled.button((props)=>({
     backgroundColor: props.variant == "primary" ? '#03045E' : '#f00',
     border: 0,
     borderRadius: '0.3em',
-    width: 100,
-    height: 30,
+    width: props.size == 'large' ? 100 : 50,
+    height: props.size == 'large' ? 30 : 20,
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: props.size == 'large' ? 16 : 12,
     color: '#fff',
 
 
