@@ -1,14 +1,12 @@
-const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+import {ButtonContainer} from './button.styles'
+const Button = ({ variant, backgroundColor, size, label, ...props }) => {
 
-    const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
     return (
-      <button
-        type="button"
-        style={{backgroundColor}}
-        {...props}
+      <ButtonContainer
+        variant={variant}
       >
         {label}
-      </button>
+      </ButtonContainer>
     );
     
 }
