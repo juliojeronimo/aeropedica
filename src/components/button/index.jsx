@@ -1,4 +1,4 @@
-import {ButtonContainer} from './button.styles'
+import {ButtonContainer} from './button.style'
 const Button = ({ variant, backgroundColor, size, label, ...props }) => {
 
     return (
