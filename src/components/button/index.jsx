@@ -4,6 +4,7 @@ const Button = ({ variant, backgroundColor, size, label, ...props }) => {
     return (
       <ButtonContainer
         variant={variant}
+        size={size}
       >
         {label}
       </ButtonContainer>
@@ -12,7 +13,7 @@ const Button = ({ variant, backgroundColor, size, label, ...props }) => {
 }
 
 Button.default = {
-    backgroundColor: '#ff0'
+    size: 'large'
 }
 
 export { Button}
