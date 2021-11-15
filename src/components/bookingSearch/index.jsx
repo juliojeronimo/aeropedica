@@ -16,7 +16,6 @@ const BookingSearch = () => {
     const [date, setDate] = useState('')
 
     return (<Container>
-        {/* {JSON.stringify(date)} */}
         <Title>Reservas</Title>
             <Row>
                 <SearchInput placeholder={'Origem'} value={origin} onChange={(event) => { setOrigin(event.target.value) }} />

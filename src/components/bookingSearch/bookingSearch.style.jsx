@@ -15,8 +15,7 @@ const ContainerActions = styled.div(()=>(({
 })))
 
 const InputContainer = styled.div(()=>({
-    // padding: '1em',
-    // backgroundColor: '#ddf5fa', 
+
 }))
 
 const Title = styled.text(()=>({
@@ -36,7 +35,6 @@ const Row = styled.div(() => ({
 }))
 
 const Field = styled.input`
-
     width: 20em;
     border: none;
     outline: none;
