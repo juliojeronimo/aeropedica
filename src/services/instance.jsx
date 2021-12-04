@@ -9,7 +9,7 @@ const config = {
 
 
 const instance = axios.create({
-  baseURL: 'https://aplicativos.avantti.com.br/apiap/swagger/v1/',
+  baseURL: 'https://aplicativos.avantti.com.br/apiap/',
   timeout: 10000,
   headers: config.headers,
 })

@@ -7,7 +7,6 @@ import {
 import App from "./App";
 import Airplanes from './routes/airplanes'
 import Passengers from "./routes/passengers";
-// import Invoices from "./routes/invoices";
 
 const rootElement = document.getElementById("root");
 render(

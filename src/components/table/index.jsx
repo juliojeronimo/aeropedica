@@ -15,7 +15,7 @@ const Table = ({ header, list, updateItem, deleteItem }) => {
             </HeaderRow>
 
             {list.map((itemObj, index) => {
-                return (<ItemRow index={index}>
+                return (<ItemRow key={index} index={index}>
                     {
                         keys.map((item) => {
                             return <ColumnItem>{itemObj[item]}</ColumnItem>
