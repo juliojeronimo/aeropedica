@@ -3,18 +3,18 @@ import styled from 'styled-components'
 let widthTable = '70em'
 
 const Container = styled.div(() => ({
-    borderWidth: 0.3,
-    borderStyle: 'solid',
-    borderColor: '#e5e5e5',
+    // borderWidth: 0.3,
+    // borderStyle: 'solid',
+    // borderColor: '#e5e5e5',
     fontFamily: 'sans-serif',
     // display: 'table',
     height: '25em',
 }))
 
 const ScrollView = styled.div(() => ({
-    borderWidth: 0.3,
-    borderStyle: 'solid',
-    borderColor: '#e5e5e5',
+    // borderWidth: 0.3,
+    // borderStyle: 'solid',
+    // borderColor: '#e5e5e5',
     fontFamily: 'sans-serif',
     // display: 'table',
     height: '25em',
