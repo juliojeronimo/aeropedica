@@ -1,11 +1,11 @@
 import {Menu} from '../../components/menu'
 
-const Equipment = ({ }) => {
+const Airports = ({ }) => {
     return (
         <div>
-            <Menu pageIndex={3}/>
+            <Menu pageIndex={0}/>
         </div>
     );
 }
 
-export default Equipment
+export default Airports
