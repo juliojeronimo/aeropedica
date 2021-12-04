@@ -1,14 +1,26 @@
 import styled from 'styled-components'
 
-let widthTable = '40em'
+let widthTable = '70em'
 
 const Container = styled.div(() => ({
     borderWidth: 0.3,
     borderStyle: 'solid',
-    borderColor: '#e5e5e5', 
+    borderColor: '#e5e5e5',
     fontFamily: 'sans-serif',
-    display: 'table'
+    // display: 'table',
+    height: '25em',
 }))
+
+const ScrollView = styled.div(() => ({
+    borderWidth: 0.3,
+    borderStyle: 'solid',
+    borderColor: '#e5e5e5',
+    fontFamily: 'sans-serif',
+    // display: 'table',
+    height: '25em',
+    overflow: 'auto'
+}))
+
 const HeaderRow = styled.div((props) => ({
     display: 'flex',
     paddingLeft: 10,
@@ -50,4 +62,4 @@ const ColumnItem = styled.div((props) => ({
     flexDirection: 'row',
 }))
 
-export { HeaderRow, ColumnTitle, ColumnItem, ItemRow, Container }
+export { Container,HeaderRow, ColumnTitle, ColumnItem, ItemRow, ScrollView }

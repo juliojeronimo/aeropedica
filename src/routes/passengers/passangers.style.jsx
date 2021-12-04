@@ -21,9 +21,9 @@ const Title = styled.text(()=>({
     fontWeight: 'bold',
     fontSize: 30,
     marginTop: 50,
-    marginBottom: 30,
+    marginBottom: 0,
     paddingTop: 10,
-    paddingBottom: 20,
+    paddingBottom: 0,
     fontFamily: 'sans-serif',
 
 }))
