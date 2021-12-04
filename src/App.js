@@ -1,16 +1,20 @@
-import logo from './assets/images/logo-default.png';
-// import './App.css';
-import { Button } from './components/button'
-import { Menu } from './components/menu'
+import { Link } from "react-router-dom";
+import styles from './App.css';
 
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Menu pageIndex={0} />
-      {/* <Button/> */}
+    <div className={styles.content}>
+    <h1>Bookkeeper</h1>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem"
+        }}
+      >
+        <Link to="/passengers">Passengers</Link>
+        <Link to="/expenses">Expenses</Link>
+      </nav>
     </div>
   );
 }
-
-export default App;
