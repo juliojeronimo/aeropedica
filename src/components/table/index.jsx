@@ -1,4 +1,4 @@
-import { Container, HeaderRow, ColumnTitle, ColumnItem, ItemRow } from './table.style';
+import { Container, ScrollView, HeaderRow, ColumnTitle, ColumnItem, ItemRow } from './table.style';
 import { Button } from '../button'
 
 
@@ -13,23 +13,26 @@ const Table = ({ header, list, updateItem, deleteItem }) => {
                     return <ColumnTitle>{item}</ColumnTitle>
                 })}
             </HeaderRow>
-
-            {list.map((itemObj, index) => {
-                return (<ItemRow index={index}>
-                    {
-                        keys.map((item) => {
-                            return <ColumnItem>{itemObj[item]}</ColumnItem>
-                        })
-
-                    }
-                    <ColumnItem>
-                        <Button label={'Editar'} variant={'primary'} onClick={updateItem} />
-                        <Button label={'Deletar'} variant={'secondary'} onClick={deleteItem} />
-                    </ColumnItem>
-                </ItemRow>)
-            })}
+            <ScrollView>
 
 
+                {list.map((itemObj, index) => {
+                    return (<ItemRow key={index} index={index}>
+                        {
+                            keys.map((item) => {
+                                return <ColumnItem>{itemObj[item]}</ColumnItem>
+                            })
+
+                        }
+                        <ColumnItem>
+                            <Button style={{ marginRight: 10 }} label={'Editar'} variant={'primary'} onClick={updateItem} />
+                            <Button label={'Deletar'} variant={'secondary'} onClick={deleteItem} />
+                        </ColumnItem>
+                    </ItemRow>)
+                })}
+
+
+            </ScrollView>
         </Container>
 
     );

@@ -48,7 +48,8 @@ const Field = styled.input`
     
     &::placeholder  {
         color: #BDC5C6;
-      }`
+      }
+`
 
 
 export { Container,ContainerActions, InputContainer, Title, Field, Row }
