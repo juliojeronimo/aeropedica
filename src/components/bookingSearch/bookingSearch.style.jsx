@@ -9,6 +9,7 @@ const Container = styled.div(() => ({
 
 const ContainerActions = styled.div(()=>(({
     display: 'flex',
+    marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'center',
     width: '100%'
@@ -20,7 +21,7 @@ const InputContainer = styled.div(()=>({
 
 const Title = styled.text(()=>({
     fontWeight: 'bold',
-    fontSize: 24,
+    fontSize: 30,
     paddingTop: 10,
     paddingBottom: 20,
     fontFamily: 'sans-serif'

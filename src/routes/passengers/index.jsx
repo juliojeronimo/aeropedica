@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../../components/menu'
 import { Table } from '../../components/table'
 import {Button} from '../../components/button'
@@ -303,17 +303,13 @@ let objects =
     ]
 
 const Passangers = ({ }) => {
+    const [passengers, setPassengers] = useState([])
+
     useEffect(()=>{
-        instance.post('api/Passageiro/Cadastrar', {
-            "cd_psgr": 4,
-            "nm_psgr": "string",
-            "ic_sexo_psgr": "string",
-            "dt_nasc_psgr": "2021-12-04",
-            "cd_pais": "string",
-            "ic_estd_civil": "string",
-            "cd_psgr_resp": 2
-        }).then((res)=>{
+        instance.get('/api/Passageiro/Listar').then((res)=>{
             console.log(JSON.stringify(res))
+            setPassengers(res.data)
+
         }).catch((e)=>{
             console.log(JSON.stringify(e))
         })
@@ -326,7 +322,7 @@ const Passangers = ({ }) => {
                 <Title>Passageiros</Title>
                 <Button style={{margin: 50}} label={'Cadastrar'} variant={'primary'} size={'extra-large'}/>
                 <Table header={HeaderList}
-                    list={objects}
+                    list={passengers}
                     updateItem={() => console.log('editando')}
                     deleteItem={() => console.log('deletando')} />
             </SideBox>
