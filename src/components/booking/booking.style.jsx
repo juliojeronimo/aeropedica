@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 const Container = styled.div(()=>({
+    overflow: 'auto',
+    height: '22em',
+    margin: '2em'
+}))
+
+const BookingView = styled.div(()=>({
     width: '40em',
     height: '5em',
     margin: '1em',
@@ -9,8 +15,7 @@ const Container = styled.div(()=>({
     backgroundColor: '#ddf5fa',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    
+    justifyContent: 'space-around', 
 }))
 
 const Text = styled.div((props)=>({
@@ -36,4 +41,4 @@ const LineVertical = styled.div(()=>({
     borderLeftWidth: 0.05,
 }))
 
-export {Container, Column, Text, LineVertical }
+export {Container, BookingView, Column, Text, LineVertical }

@@ -26,8 +26,7 @@ const BookingSearch = () => {
 
             </Row>
             <ContainerActions>
-                <Button label={'Buscar voo'} size={'extra-large'} variant={'primary'} onClick={()=>onSubmit({origin, target, date})}/>
-
+                <Button style={{marginRight: 10}} label={'Buscar voo'} size={'extra-large'} variant={'primary'} onClick={()=>onSubmit({origin, target, date})}/>
                 <Button label={'Buscar reserva'} size={'extra-large'} variant={'primary'} />
             </ContainerActions>
     </Container>)
