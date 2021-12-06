@@ -22,7 +22,7 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}/>
+      <Route path="/" element={<Bookings />}/>
       <Route path="/airports" element={ <Airports />} />
       <Route path="/airplanes" element={ <Airplanes />} />
       <Route path="/companies" element={ <Companies />} />

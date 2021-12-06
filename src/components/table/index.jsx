@@ -4,7 +4,7 @@ import { Button } from '../button'
 
 const Table = ({ header, list, updateItem, deleteItem }) => {
 
-    let keys = Object.keys(list[0])
+    let keys = Object.keys(list[0]? list[0]: {})
 
     return (
         <Container>
