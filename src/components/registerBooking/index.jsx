@@ -64,7 +64,7 @@ const RegisterBooking = ({ registerData, show }) => {
                 <SearchInput placeholder={'Data de nascimento'} value={birthdate} onChange={(event) => { setBirthdate(event.target.value) }}></SearchInput>
             </Row>
             <Row>
-                <Button style={{"marginTop": "8px"}} label={"Cadastrar"} variant="primary" size={"extra-large"} onClick="submit()"/>
+                <Button style={{"marginTop": "8px"}} label={"Reservar >"} variant="primary" size={"extra-large"} onClick="submit()"/>
             </Row>
         </Box>
     </ContainerModal>
