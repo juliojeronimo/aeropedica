@@ -345,6 +345,7 @@ const Passangers = ({ }) => {
             <Menu pageIndex={4} />
             <RegisterPassenger
                 show={showModal}
+                onClickOut={()=> setShowModal(false)}
                 register={({ name, birthdate, responsibleCode, country, sex, maritalStatus }) => registerPassenger({ name, birthdate, responsibleCode, country, sex, maritalStatus, onSucess: ()=> setShowModal(false) })} />
             <SideBox>
                 <Title>Passageiros</Title>

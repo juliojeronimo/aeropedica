@@ -3,7 +3,7 @@ import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Titl
 
 import { Button } from '../button'
 
-const SearchInput = ({ label, type, placeholder, value, onChange }) => {
+const SearchInput = ({ label, type, placeholder, value, onChange,  }) => {
     return (
         <InputContainer>
             {label ? <Label>{label}</Label>
@@ -13,7 +13,7 @@ const SearchInput = ({ label, type, placeholder, value, onChange }) => {
     )
 }
 
-const RegisterPassenger = ({ show, onClose, register }) => {
+const RegisterPassenger = ({ show, onClose, register, onClickOut }) => {
     const [name, setName] = useState('')
     const [birthdate, setBirthdate] = useState('')
     const [responsibleCode, setResponsibleCode] = useState('')
@@ -22,7 +22,7 @@ const RegisterPassenger = ({ show, onClose, register }) => {
     const [showModal, setShowModal] = useState(show)
     const [maritalStatus, setMaritalStatus] = useState('')
 
-    return <ContainerModal show={show}>
+    return <ContainerModal onClick={()=>{onClickOut()}} show={show}>
         <Box>
             <Title>Cadastro de passageiro</Title>
 
