@@ -10,6 +10,7 @@ const ButtonContainer = styled.button((props)=>({
     fontWeight: props.variant === 'ghost' ? '' :  'bold',
     fontSize: props.size === 'extra-large' ? 16 : props.size === 'large' ? 16 : 12,
     color: props.variant === 'ghost' ? '#000' :  '#fff' ,
+    cursor: "pointer"
 }))
 
 

@@ -28,7 +28,6 @@ const InputContainer = styled.div(()=>({
     display: 'flex', 
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: 'red',
     width: '100%'
 }))
 
@@ -41,7 +40,8 @@ const Label = styled.p(()=>({
 const Row = styled.div(()=>({
     display: 'flex',
     flexDirection: 'row', 
-
+    AlignItens: 'center',
+    justifyContent: 'center'
 }))
 
 const Title = styled.p(()=>({

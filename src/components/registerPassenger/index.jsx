@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Title, Label } from './registerPassenger.style'
 
+import { Button } from '../button'
+
 const SearchInput = ({ label, type, placeholder, value, onChange }) => {
     return (
         <InputContainer>
@@ -34,9 +36,11 @@ const RegisterPassenger = ({ show, onClose }) => {
                 <SearchInput placeholder={'Cod. responsável'} value={responsibleCode} onChange={(event) => { setResponsibleCode(event.target.value) }}></SearchInput>
             </Row>
             <Row>
-                <SearchInput placeholder={'País'} value={country} onChange={(event) => { setCountry(event.target.value) }}></SearchInput>
+                <SearchInput placeholder={'País'} value={country} onChange={(event) => { setCountry(event.target.value) }}></SearchInput>\
             </Row>
-
+            <Row>
+                <Button style={{"marginTop": "8px"}} label={"Cadastrar"} variant="primary" size={"extra-large"} onClick="submit()"/>
+            </Row>
         </Box>
     </ContainerModal>
 }
