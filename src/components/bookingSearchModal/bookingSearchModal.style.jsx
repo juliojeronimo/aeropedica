@@ -26,8 +26,8 @@ const Box = styled.div(()=>({
     margin: '15% auto',
     padding: '10px',
     border: '1px solid #888',
-    display: 'table'
-    // width: '20em',
+    display: 'table',
+    width: '20em',
 }))
 
 const InputContainer = styled.div(()=>({

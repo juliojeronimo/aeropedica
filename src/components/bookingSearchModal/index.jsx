@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Title, Label } from './bookingSearchModal.style'
+import {BookingDone} from '../bookingDone'
 
 import { Button } from '../button'
 
@@ -26,6 +27,7 @@ const BookingSearchModal = ({ show }) => {
             <Row>
                 <Button style={{"marginTop": "8px"}} label={"Reservar >"} variant="primary" size={"extra-large"} onClick="submit()"/>
             </Row>
+            <BookingDone/>
         </Box>
     </ContainerModal>
 }
