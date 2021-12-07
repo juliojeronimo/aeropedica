@@ -1,17 +1,27 @@
-# Getting Started with Create React App
+# Aeropedica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi construido usando a biblioteca React JS.
 
-## Available Scripts
+## Como rodar o projeto?
 
-In the project directory, you can run:
+Na pasta raiz, basta executar o seguinte comando:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Em [http://localhost:3000](http://localhost:3000) você pode acessar o site.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A cada edição a página recarrega.
+
+## Como rodar o storybook?
+
+Storybook é uma ferramenta para desenvolvimento e testagem de componentes visuais.
+
+Na pasta raiz, basta executar o seguinte comando:
+
+### `yarn storybook`
+
+Em [http://localhost:6006](http://localhost:6006) você pode acessar o storybook.
+
+A cada edição a página recarrega.
 
 
