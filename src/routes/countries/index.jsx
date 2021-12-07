@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../../components/menu'
 import { Table } from '../../components/table'
 import { Button } from '../../components/button'
@@ -77,6 +77,17 @@ let objects = [
 ]
 
 const Countries = ({ }) => {
+    const [countries, setCountries] = useState([])
+
+    useEffect(() => {
+        instance.get('/api/Pais/Listar').then((res) => {
+            console.log(JSON.stringify(res))
+            setCountries(res.data)
+
+        }).catch((e) => {
+            console.log(JSON.stringify(e))
+        })
+    }, [])
 
     return (
         <Container>
@@ -85,7 +96,7 @@ const Countries = ({ }) => {
                 <Title>País</Title>
                 <Button style={{ margin: 50 }} label={'Cadastrar'} variant={'primary'} size={'extra-large'} />
                 <Table header={HeaderList}
-                    list={objects}
+                    list={countries}
                     updateItem={() => console.log('editando')}
                     deleteItem={() => console.log('deletando')} />
             </SideBox>

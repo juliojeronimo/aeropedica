@@ -6,8 +6,8 @@ const Booking = ({ bookings }) => {
         {
             bookings.map((item, index) => {
                 const { source, target, airportSource,
-                    airportTarget, time, price, discount } = item
-                return <BookingView>
+                    airportTarget, time, price, discount, cd_psgr, nr_voo, dt_saida_voo, pc_desc_pasg } = item
+                return <BookingView>    
                     <Column style={{ width: '20em' }}>
                         <Text size={'medium'}>
                             {`Origem: ${source} `}

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../../components/menu'
 import { Table } from '../../components/table'
 import {Button} from '../../components/button'
@@ -180,6 +180,18 @@ let objects = [
 
 const Airports = ({ }) => {
 
+    const [airports, setAirports] = useState([])
+
+    useEffect(() => {
+        instance.get('/api/Aeroporto/Listar').then((res) => {
+            console.log(JSON.stringify(res))
+            setAirports(res.data)
+
+        }).catch((e) => {
+            console.log(JSON.stringify(e))
+        })
+    },[])
+
     return (
         <Container>
             <Menu pageIndex={0} />
@@ -187,7 +199,7 @@ const Airports = ({ }) => {
                 <Title>Aeroportos</Title>
                 <Button style={{margin: 50}} label={'Cadastrar'} variant={'primary'} size={'extra-large'}/>
                 <Table header={HeaderList}
-                    list={objects}
+                    list={airports}
                     updateItem={() => console.log('editando')}
                     deleteItem={() => console.log('deletando')} />
             </SideBox>
