@@ -13,6 +13,13 @@ const ContainerModal = styled.div((props)=>({
     backgroundColor: 'rgba(0,0,0,0.4)', 
 }))
 
+const Text = styled.div((props)=>({
+    fontFamily: 'sans-serif',
+    fontWeight: 'normal',
+    padding: 5,
+    fontSize: props.size === 'large' ? 18 : props.size === 'medium' ? 16 : 12,
+}))
+
 const Box = styled.div(()=>({
     backgroundColor: '#fefefe',
     borderRadius: '0.5em',
@@ -81,4 +88,4 @@ const Field = styled.input`
       }
 `
 
-export { ContainerModal, Box, Row, InputContainer, Description, ContainerActions, Field, Title, Label}
+export { ContainerModal, Box, Row, InputContainer, Description, ContainerActions, Field, Title, Label, Text }

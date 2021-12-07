@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Title, Label } from './registerBooking.style'
+import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Title, Label, Text } from './registerBooking.style'
 
 import { Button } from '../button'
 
@@ -18,9 +18,40 @@ const RegisterBooking = ({ registerData, show }) => {
     const [birthdate, setBirthdate] = useState('')
     const [cod, setcod] = useState('')
 
+    const { flightsNumber, value, discount, origin, destiny } = registerData ? registerData: {}
+
     return <ContainerModal show={show}>
         <Box>
             <Title>Cadastro de passageiro</Title>
+
+            <Row>
+                <Text size={'medium'}>
+                    {`Número de voo: ${flightsNumber} `}
+                </Text>
+                <Text size={'medium'}>
+                    {`Valor: ${value} `}
+                </Text>
+            </Row>
+
+            <Row>
+                <Text size={'medium'}>
+                    {`Origem: ${origin} `}
+                </Text>
+                <Text size={'medium'}>
+                    {`Desconto: ${discount} `}
+                </Text>
+            </Row>
+
+            
+            <Row>
+                <Text size={'medium'}>
+                    {`Destino: ${destiny} `}
+                </Text>
+            </Row>
+
+            <Row>
+                <p style={{"fontWeight": "extra-bold"}}>Reserver para:</p>
+            </Row>
 
             <Row>
                 <SearchInput placeholder={'Cod. Passageiro'} value={cod} onChange={(event) => { setcod(event.target.value) }}></SearchInput>
