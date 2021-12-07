@@ -13,7 +13,7 @@ const SearchInput = ({ label, type, placeholder, value, onChange }) => {
     )
 }
 
-const RegisterBooking = ({ registerData }) => {
+const RegisterBooking = ({ registerData, show }) => {
     const [name, setName] = useState('')
     const [birthdate, setBirthdate] = useState('')
     const [cod, setcod] = useState('')
@@ -21,9 +21,6 @@ const RegisterBooking = ({ registerData }) => {
     return <ContainerModal show={show}>
         <Box>
             <Title>Cadastro de passageiro</Title>
-
-            <label>Núm. do voo: <p>{flightNumber}</p></label>
-            <label>Valor: <p>{value}</p></label>
 
             <Row>
                 <SearchInput placeholder={'Cod. Passageiro'} value={cod} onChange={(event) => { setcod(event.target.value) }}></SearchInput>
