@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ContainerModal, Box, Row, InputContainer, ContainerActions, Field, Title, Label } from './bookingSearchModal.style'
+import { ContainerModal, Box, Row, InputContainer, Field, Title, Label } from './bookingSearchModal.style'
 
 import { Button } from '../button'
 

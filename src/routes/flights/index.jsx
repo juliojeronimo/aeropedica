@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../../components/menu'
 import { Table } from '../../components/table'
 import {Button} from '../../components/button'
@@ -162,14 +162,26 @@ let objects = [
 
 const FlightRoutes = ({ }) => {
 
+    const [flights, setFlights] = useState([])
+
+    useEffect(() => {
+        instance.get('/api/Voo/Listar').then((res) => {
+            console.log(JSON.stringify(res))
+            setFlights(res.data)
+
+        }).catch((e) => {
+            console.log(JSON.stringify(e))
+        })
+    },[])
+
     return (
         <Container>
             <Menu pageIndex={7} />
             <SideBox>
-                <Title>Rotas de voo</Title>
+                <Title>Voos</Title>
                 <Button style={{margin: 50}} label={'Cadastrar'} variant={'primary'} size={'extra-large'}/>
                 <Table header={HeaderList}
-                    list={objects}
+                    list={flights}
                     updateItem={() => console.log('editando')}
                     deleteItem={() => console.log('deletando')} />
             </SideBox>
