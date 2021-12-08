@@ -5,91 +5,23 @@ import { Button } from '../../components/button'
 import { Container, SideBox, Title } from './countries.style'
 import instance from '../../services/instance'
 
+//A HeaderList é o titulo das colunas das tabelas 
 let HeaderList = ['Cód. País', 'Nome', 'Actions']
 
-let objects = [
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-    {
-        'cod_country': 'BR',
-        'name': 'Brasil',
-    },
-
-
-]
-
 const Countries = ({ }) => {
-    const [countries, setCountries] = useState([])
+    const [countries, setCountries] = useState([]) //variavel (estado) que guarda o array de paises já cadastrados no sistema
 
     useEffect(() => {
-        instance.get('/api/Pais/Listar').then((res) => {
+        instance.get('/api/Pais/Listar').then((res) => { //Faz a chamada para a API para listar todos os paises
             console.log(JSON.stringify(res))
-            setCountries(res.data)
+            setCountries(res.data) //Salva na variavel o array com os paises
 
         }).catch((e) => {
             console.log(JSON.stringify(e))
         })
     }, [])
 
-    return (
+    return ( //Monta a tabelas com componentes que estão na pasta "components" 
         <Container>
             <Menu pageIndex={9} />
             <SideBox>

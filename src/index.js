@@ -1,3 +1,5 @@
+//entry point da aplicação
+
 import { render } from "react-dom";
 import {
   BrowserRouter,
@@ -17,7 +19,8 @@ import States from './routes/states';
 import Countries from './routes/countries';
 
 
-
+//renderiza as rotas. (Ex: www.aeropédica.com.br/airports) Dependendo da URL ele chama um elemento diferente.
+//Os elementos chamados estão na pasta routes
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>

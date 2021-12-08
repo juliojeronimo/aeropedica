@@ -1,3 +1,4 @@
+//Arquivo para escrever futuros testes
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

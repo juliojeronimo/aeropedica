@@ -2,12 +2,10 @@ import axios from 'axios'
 
 const config = {
   headers: {
-    // 'X-VTEX-API-AppToken': 'VHJNORGCMXKPLREWJWJNEUNRSTNJVAEGYGBAIEAHRMHAIQTMNSHMLZFBTRUVDWGMTERFQENEWCVSMNJCZBVDSRUYAZGRJEDUFVGEZNVJECQJDNOFISWBADTCJSFQXWUS',
-    // 'X-VTEX-API-AppKey': 'vtexappkey-lojaanimale-ZGPRNG',
   },
 }
 
-
+//Cria a conexão com a API que está hospedada em 'https://aplicativos.avantti.com.br/apiap/'
 const instance = axios.create({
   baseURL: 'https://aplicativos.avantti.com.br/apiap/',
   timeout: 10000,

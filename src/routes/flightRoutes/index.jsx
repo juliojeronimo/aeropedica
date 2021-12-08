@@ -9,18 +9,18 @@ let HeaderList = ['Cód. Origem', 'Cód. Destino', 'Num. Rota', 'Voucher',  'Act
 
 const FlightRoutes = ({ }) => {
 
-    const [routes, setRoutes] = useState([])
+    const [routes, setRoutes] = useState([]) //variavel (estado) que guarda o array de paises já cadastrados no sistema
 
     useEffect(()=> {
-        instance.get('./api/Rota/Listar').then((res) => {
+        instance.get('./api/Rota/Listar').then((res) => { //Faz a chamada para a API para listar todos as rotas de voo
             console.log(JSON.stringify(res))
-            setRoutes(res.data)
+            setRoutes(res.data) //Salva na variavel o array com os paises
         }).catch((e) => {
             console.log(JSON.stringify(e))
         })
     })
 
-    return (
+    return ( //Monta a tabelas com componentes que estão na pasta "components"
         <Container>
             <Menu pageIndex={6} />
             <SideBox>

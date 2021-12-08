@@ -5,22 +5,23 @@ import {Button} from '../../components/button'
 import { Container, SideBox, Title } from './equipments.style'
 import instance from '../../services/instance'
 
+//A HeaderList é o titulo das colunas das tabelas 
 let HeaderList = ['Cód. Equipamento', 'Nome', 'Tipo', 'Motores', 'Propulsor',  'Actions']
 
 const Equipments = ({ }) => {
 
-    const [equipaments, setEquipaments] = useState([])
+    const [equipaments, setEquipaments] = useState([]) //variavel (estado) que guarda o array de paises já cadastrados no sistema
 
     useEffect(() => {
-        instance.get('./api/Equipamento/Listar').then((res) => {
+        instance.get('./api/Equipamento/Listar').then((res) => { //Faz a chamada para a API para listar todos os Equipamentos
             console.log(JSON.stringify(res))
-            setEquipaments(res.data)
+            setEquipaments(res.data) //Salva na variavel o array com os equipamentos
         }).catch((e) => {
             console.log(JSON.stringify(e))
         })
     })
 
-    return (
+    return ( //Monta as tabelas com componentes que estão na pasta "components" 
         <Container>
             <Menu pageIndex={3} />
             <SideBox>

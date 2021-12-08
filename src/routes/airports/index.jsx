@@ -5,185 +5,19 @@ import {Button} from '../../components/button'
 import { Container, SideBox, Title } from './airports.style'
 import instance from '../../services/instance'
 
+//Arquivo que monta a tela de aeroportos
+
+//A HeaderList é o titulo das colunas das tabelas 
 let HeaderList = ['Cód. Aeroporto', 'Cidade', 'País', 'UF', 'Actions']
 
-let objects = [
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-    {
-        'cod_airport': '1',
-        'city': 'Rio de Janeiro',
-        'country': 'Brasil',
-        'state': 'Rio de Janeiro',
-    },
-]
-
 const Airports = ({ }) => {
-
+    
+    //variavel (estado) que guarda o array de aeroportos já cadastrados no sistema
     const [airports, setAirports] = useState([])
 
+
     useEffect(() => {
-        instance.get('/api/Aeroporto/Listar').then((res) => {
+        instance.get('/api/Aeroporto/Listar').then((res) => { //chamada para a API para listar todos os aeroportos
             console.log(JSON.stringify(res))
             setAirports(res.data)
 
@@ -192,7 +26,7 @@ const Airports = ({ }) => {
         })
     },[])
 
-    return (
+    return ( //Monta a tabelas com componentes que estão na pasta "components" 
         <Container>
             <Menu pageIndex={0} />
             <SideBox>
