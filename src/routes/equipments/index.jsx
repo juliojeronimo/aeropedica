@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu } from '../../components/menu'
 import { Table } from '../../components/table'
 import {Button} from '../../components/button'
@@ -7,210 +7,18 @@ import instance from '../../services/instance'
 
 let HeaderList = ['Cód. Equipamento', 'Nome', 'Tipo', 'Motores', 'Propulsor',  'Actions']
 
-let objects = [ 
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-    {
-        'cod_equipment': '013',
-        'name': 'Equipamento Ultra Hiper Big Master',
-        'type': 'Automático',
-        'motor': 'Toyota',
-        'propelant': 'Simas Turbo Inc.',
-
-    },
-]
-
 const Equipments = ({ }) => {
+
+    const [equipaments, setEquipaments] = useState([])
+
+    useEffect(() => {
+        instance.get('./api/Equipamento/Listar').then((res) => {
+            console.log(JSON.stringify(res))
+            setEquipaments(res.data)
+        }).catch((e) => {
+            console.log(JSON.stringify(e))
+        })
+    })
 
     return (
         <Container>
@@ -219,7 +27,7 @@ const Equipments = ({ }) => {
                 <Title>Equipamentos</Title>
                 <Button style={{margin: 50}} label={'Cadastrar'} variant={'primary'} size={'extra-large'}/>
                 <Table header={HeaderList}
-                    list={objects}
+                    list={equipaments}
                     updateItem={() => console.log('editando')}
                     deleteItem={() => console.log('deletando')} />
             </SideBox>
