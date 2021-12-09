@@ -3,7 +3,7 @@ import logo from '../../assets/images/logo-default.png'
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-
+//itens do menu
 let menuList = [
     {name: 'Aeroportos', route: 'airports'}, 
     {name: 'Aeronaves', route: 'airplanes'}, 
@@ -19,6 +19,7 @@ let menuList = [
 
 ]
 
+//monta menu
 const Menu = ({ menuItems, pageIndex }) => {
     let [menuIndex, setMenuIndex] = useState(pageIndex)
     return (
